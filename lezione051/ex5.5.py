@@ -14,7 +14,7 @@ def main():
     N_bins = 125
     bin_edges = np.linspace (np.amin(cube_list), np.amax(cube_list), N_bins)
     ax.hist (sample,bins=bin_edges, alpha = 0.9,
-             color = 'orange')
+             color = 'grey')
     ax.hist (cube_list,bins=bin_edges, alpha = 0.5,
              color = 'blue')
     ax.hist (square_list,bins=bin_edges, alpha = 0.1,
