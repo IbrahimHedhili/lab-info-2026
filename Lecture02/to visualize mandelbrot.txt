@@ -1,0 +1,3 @@
+to visualize mandelbrot images tipe in terminal:
+
+	vipsdisp file_name.png
