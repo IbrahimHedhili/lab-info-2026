@@ -31,7 +31,7 @@ class linear_congruential_generator:
     def generate(self):
         self.x_n = ((self.A * self.x_n + self.C) % self.M)
         return self.x_n
-    def generate(self, n):
+    def generaten(self, n):
         a_rand = np.ones(n)
         for i in range(n):
             self.x_n = ((self.A * self.x_n + self.C) % self.M)
@@ -39,7 +39,10 @@ class linear_congruential_generator:
         return a_rand
 
 def main():
-    a = 0
+    linear = linear_congruential_generator(5)
+    print(linear.generate())
+    linear.restart()
+    print(linear.generaten(5))
 
 if __name__ == "__main__":
     main()
