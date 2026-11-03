@@ -98,4 +98,22 @@ def golden_ratio_search_method_2 (
     return (xMax + xMin)* 0.5
 
 
+def golden_ratio_search_method_maximum_recursive (
+    g,              # funzione di cui trovare l'estremo
+    xMin,           # minimo dell'intervallo          
+    xMax,           # massimo dell'intervallo         
+    prec = 0.0001): # precisione della funzione        
+    '''
+    Funzione che calcola l'estremo
+    con il metodo della bisezione
+    '''
+    if xMax - xMin > prec : return (xMax + xMin) * 0.5
 
+    x_r = 0.618 * (xMax - xMin) + xMin
+    x_1_r = xMin + (1 - 0.618) *  (xMax - xMin)
+
+    if(g(x_r) > g(x_1_r)):
+        return golden_ratio_search_method_recursive(g,x_1_r, xMax)
+    else:
+        return golden_ratio_search_method_recursive(g, xMin, x_r)
+    
