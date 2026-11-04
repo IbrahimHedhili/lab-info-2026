@@ -68,7 +68,6 @@ def golden_ratio_search_method_recursive (
         return golden_ratio_search_method_recursive(g,x_1_r, xMax)
     else:
         return golden_ratio_search_method_recursive(g, xMin, x_r)
-    
 
 import math
 
